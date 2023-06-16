@@ -1,0 +1,33 @@
+<h1 class="text-center my-3">{{servidor.name}}</h1>
+
+{{!-- <span class="d-block text-center p-2 text-bg-primary">Canales del servidor</span>
+<span class="d-block text-center p-2 text-bg-dark">{{#each canales}}
+<p>{{this.name}}</p>{{/each}}</span> --}}
+
+<div style="display: flex; align-items: center; justify-content: center;">
+  <div class="badge bg-primary text-center my-3" style="width: 9rem; height: 3rem;"><h2>Emojis</h2></div>
+</div>
+<div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {{#each emojis}}
+        <div class="col my-1">
+            <div class="card">
+                <div class="row">
+                    <div class="col-4">
+                        {{#if this.url}}
+                        <img src="{{this.url}}" alt="{{this.name}}" style="height: 128px; width: 128px;"
+                        alt="{{this.name}}">
+                        {{/if}}                
+                    </div>
+                    <div class="col">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.name}}</h5>
+                            <a href="{{this.url}}" class="btn btn-info">URL</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        {{/each}}
+    </div>
+</div>
