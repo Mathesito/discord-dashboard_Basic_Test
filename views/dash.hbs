@@ -1,4 +1,4 @@
-<h1 class="text-primary text-center my-3">¡Bienvenido {{user.username}}!</h1>
+<h1 class="text-primary text-center my-3">¡Welcome {{user.username}}!</h1>
 
 <div class="container-fluid">
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -18,9 +18,9 @@
                         <div class="card-body">
                             <h5 class="card-title">{{this.name}}</h5>
                             {{#if this.esta}}
-                            <a href="/dash/{{this.id}}" class="btn btn-danger">Iniciar</a>
+                            <a href="/dash/{{this.id}}" class="btn btn-danger">Manage</a>
                             {{ else }}
-                            <a href="https://discord.com/api/oauth2/authorize?client_id=1031696983955619870&permissions=0&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Flogin&scope=bot" class="btn btn-info">Invitar</a>
+                            <a href="https://discord.com/api/oauth2/authorize?client_id=1031696983955619870&permissions=0&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Flogin&scope=bot" class="btn btn-info">Invite</a>
                             {{/if}}
                         </div>
                     </div>
